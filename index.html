@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MadLibs</title>
+
+      <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+
+
+<style>
+
+	body {
+		border: 2px solid;
+		margin: 10px 100px;
+	}
+
+
+	.top-section {
+		margin: auto;
+		margin-bottom: 30px;
+		border-bottom: 2px solid;
+	}
+
+	.top-section > div {
+	  	height: 112px;
+	  	margin: auto;
+	}
+
+	.face {
+		border-right: 2px solid;
+		float: left;
+		padding: 15px 125px;
+	}
+
+	.title {
+		float: left;
+		text-align: center;
+		padding: 12px 140px;
+	}
+
+	.title > h1 {
+		font-size: 36px;
+  		margin: 5px 15px;
+	}
+
+	.title > p{
+		margin: 0;
+		padding: 0 30px;
+	}
+
+	.words-section {
+		  padding: 0 50px 50px;
+		  clear: both;
+		  margin: auto;
+		  overflow: auto;
+		  border-bottom: 2px solid;
+	}
+
+	.words-section > p {
+		text-align: left;
+		font-size: 20px;
+	}
+
+	.words-section > div {
+		width: 150px;
+  		float: left;
+  		text-align: center;
+  		margin-right: 50px;
+	}
+
+	.words-section > div > input {
+		margin-bottom: 25px;
+	    border-color: black;
+	}
+
+	input[type="text"] {
+		color: black;
+		font-weight: bold;
+		padding: 8px;
+		text-align: center;
+
+	}
+
+	.story-section {
+		padding: 0 50px 100px;
+  		margin: auto;
+  		font-size: 18px;
+	}
+
+	.fill {
+		color: red;
+	}
+
+
+
+</style>
+</head>
+
+<body ng-app="">
+	<div class="top-section">
+		<div>
+			<div class="face"><img src="images/mad-lib-happy-face.png" height="80px"></div>
+			<div class="title">
+				<div><img src="images/ng-mad-libs-logo.png" height="40px"></div>
+				<h1>Automate This!</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="words-section">
+		<p>Provide the following words:</p>
+		<div>
+			<input type="text" ng-model="jobTitle" placeholder="Job title">
+			<input type="text" ng-model="femaleName" placeholder="Female name">
+			<input type="text" ng-model="celebrity" placeholder="Celebrity">
+		</div>
+		<div>
+			<input type="text" ng-model="uselessSkill" placeholder="Useless skill">
+			<input type="text" ng-model="tediousTask" placeholder="Tedious task">
+			<input type="text" ng-model="dirtyTask" placeholder="Dirty task">
+		</div>
+		<div>
+			<input type="text" ng-model="adjective" placeholder="Adjective">
+			<input type="text" ng-model="obnxCelebrity" placeholder="Obnoxious celebrity">
+			<input type="text" ng-model="hugeNumber" placeholder="Huge number">
+		</div>
+
+	</div>
+
+	<div class="story-section">
+		<p>{{femaleName}} was a {{jobTitle}} who loved technology. Although she loved parts of her job, she absolutely hated {{tediousTask}} and {{dirtyTask}}. So, {{femaleName}} met with her life mentor {{celebrity}} who told her to learn how to {{uselessSkill}} with Thinkful. Thinkful didn't offer a course on {{uselessSkill}} so she studied programming instead.</p>
+ 
+		<p>What a great decision! With her new skills, {{femaleName}} built a(n) {{adjective}} robot named {{obnxCelebrity}} that not only loved {{dirtyTask}} but did it {{hugeNumber}} faster.</p>
+	</div>
+	
+	
+</body>
+
+</html>
