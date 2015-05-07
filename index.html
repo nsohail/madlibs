@@ -8,98 +8,13 @@
 
       <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
 
+      <link href="style.css" rel="stylesheet" type="style/css">
 
-<style>
+      <script src="myApp.js"></script>
 
-	body {
-		border: 2px solid;
-		margin: 10px 100px;
-		font-family: 'Cabin Sketch', cursive;
-	}
-
-
-	.top-section {
-		margin: auto;
-		margin-bottom: 30px;
-		border-bottom: 2px solid;
-	}
-
-	.top-section > div {
-	  	height: 112px;
-	  	margin: auto;
-	}
-
-	.face {
-		border-right: 2px solid;
-		float: left;
-		padding: 15px 125px;
-	}
-
-	.title {
-		float: left;
-		text-align: center;
-		padding: 12px 140px;
-	}
-
-	.title > h1 {
-		font-size: 36px;
-  		margin: 5px 15px;
-	}
-
-	.title > p{
-		margin: 0;
-		padding: 0 30px;
-	}
-
-	.words-section {
-		  padding: 0 50px 50px;
-		  clear: both;
-		  margin: auto;
-		  overflow: auto;
-		  border-bottom: 2px solid;
-	}
-
-	.words-section > p {
-		text-align: left;
-		font-size: 20px;
-	}
-
-	.words-section > div {
-		width: 150px;
-  		float: left;
-  		text-align: center;
-  		margin-right: 50px;
-	}
-
-	.words-section > div > input {
-		margin-bottom: 25px;
-	    border-color: black;
-	}
-
-	input[type="text"] {
-		color: black;
-		font-weight: bold;
-		padding: 8px;
-		text-align: center;
-
-	}
-
-	.story-section {
-		padding: 0 50px 100px;
-  		margin: auto;
-  		font-size: 18px;
-	}
-
-	.fill {
-		color: red;
-	}
-
-
-
-</style>
 </head>
 
-<body ng-app="">
+<body ng-app="myApp" ng-controller="myCtrl">
 	<div class="top-section">
 		<div>
 			<div class="face"><img src="images/mad-lib-happy-face.png" height="80px"></div>
