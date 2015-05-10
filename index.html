@@ -27,11 +27,11 @@
 	</div>
 
 	<div class="choices-view" ng-show="(view === 'words')">
-		<div ng-if="myForm.$submitted && myForm.$error">
+		<div ng-if="myForm.$submitted && myForm.$error && myForm.$pristine">
 			<p class="error">All fields are required</p>
 		</div>
 
-		<div ng-if="myForm.$submitted && myForm.numberType.$error">
+		<div ng-if="myForm.$submitted && myForm.numberType.$error && myForm.$pristine">
 			<p class="error">Please enter a huge number for the story</p>
 		</div>
 
