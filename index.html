@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MadLibs</title>
+    <title>Mad Libs</title>
 
       <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
 
@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<div class="choices-view" ng-hide="myForm.$submitted && processForm()">
+	<div class="choices-view" ng-show="(view === 'words')">
 		<div ng-if="myForm.$submitted && myForm.$error">
 			<p class="error">All fields are required</p>
 		</div>
@@ -71,7 +71,7 @@
 
 	</div>
 
-	<div class="story-view" ng-show="myForm.$submitted && processForm()">
+	<div class="story-view" ng-show="(view === 'story')">
 
 		<div class="story-section">
 			<p><span class="fill">{{femaleName}}</span> was a <span class="fill">{{jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span class="fill">{{tediousTask}}</span> and <span class="fill">{{dirtyTask}}</span>. So, <span class="fill">{{femaleName}}</span> met with her life mentor <span class="fill">{{celebrity}}</span> who told her to learn how to <span class="fill">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="fill">{{uselessSkill}}</span> so she studied programming instead.</p>

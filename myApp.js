@@ -14,11 +14,13 @@ angular.module('myApp',[])
 		//$scope.hugeNumber = "Huge number";
 
 		$scope.myForm = {};
+		$scope.view = "words";
 
 		$scope.processForm = function(){
+			console.log("Test");
 			if($scope.myForm.$valid) {
 				console.log("The form is valid");
-				return true;
+				$scope.view = "story";
 			}
 			else {
 				console.log("The form is invalid");
@@ -41,6 +43,7 @@ angular.module('myApp',[])
 			$scope.obnxCelebrity = "";
 			$scope.hugeNumber = "";
 			$scope.error= "";
+			$scope.view = "words";
 
 		};
 
