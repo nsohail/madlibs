@@ -43,7 +43,6 @@ body {
 	  clear: both;
 	  margin: auto;
 	  overflow: auto;
-	  border-bottom: 2px solid;
 }
 
 .words-section > p {
@@ -53,9 +52,9 @@ body {
 
 .words-section > div {
 	width: 150px;
-		float: left;
-		text-align: center;
-		margin-right: 50px;
+	float: left;
+	text-align: center;
+	margin-right: 50px;
 }
 
 .words-section > div > input {
@@ -63,18 +62,21 @@ body {
     border-color: black;
 }
 
-input[type="text"] {
+input[type="text"],  input[type="number"]{
 	color: black;
 	font-weight: bold;
 	padding: 8px;
 	text-align: center;
+	margin-right: 40px;
+  	margin-bottom: 28px;
+
 
 }
 
 .story-section {
 	padding: 0 50px 100px;
-		margin: auto;
-		font-size: 18px;
+	margin: auto;
+	font-size: 18px;
 }
 
 .fill {
@@ -82,3 +84,26 @@ input[type="text"] {
 }
 
 
+.submit-area, .reset-area {
+	  height: 62px;
+	  margin-top: 48px;
+	  padding-top: 20px;
+	  border-top: 1px solid;
+	  text-align: right;
+}
+
+.reset-area {
+	  padding-right: 50px;
+}
+
+input#submit, input#reset {
+	  color: black;
+	  padding: 8px 18px;
+	  border: 2px solid;
+	  background: white;
+}
+
+p.error {
+  padding: 0px 48px;
+  color: red;
+}
