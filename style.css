@@ -107,3 +107,31 @@ p.error {
   padding: 0px 48px;
   color: red;
 }
+
+
+.animation {
+	overflow: hidden;
+}
+.animation-wrapper {
+  transition: all 1s ease-in-out;
+  width: 2000px;
+}
+
+.animation-wrapper.ng-hide-add {
+  margin-left: -1020px;
+}
+.animation-wrapper.ng-hide-remove {
+  margin-left: 0px;
+}
+.animation-wrapper.ng-hide-remove.ng-hide-remove-active {
+  margin-left: 0px;
+}
+.animation-wrapper.ng-hide-add.ng-hide-add-active {
+  margin-left: -1020px;
+}
+
+
+.choices-view, .story-view {
+	float: left;
+	width: 1000px;
+}
