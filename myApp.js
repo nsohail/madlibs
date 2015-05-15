@@ -15,12 +15,14 @@ angular.module('myApp',['ngAnimate'])
 
 		$scope.myForm = {};
 		$scope.view = "words";
+		$scope.animationMove = true;
 
 		$scope.processForm = function(){
 			console.log("Test");
 			if($scope.myForm.$valid) {
 				console.log("The form is valid");
 				$scope.view = "story";
+				$scope.animationMove = false;
 			}
 			else {
 				console.log("The form is invalid");
@@ -44,7 +46,7 @@ angular.module('myApp',['ngAnimate'])
 			$scope.hugeNumber = "";
 			$scope.error= "";
 			$scope.view = "words";
-
+			$scope.animationMove = true;
 		};
 
 	});

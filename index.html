@@ -28,67 +28,65 @@
 		</div>
 	</div>
 
-	<div class="animation">
-		<div class="animation-wrapper">
+	<div class="animation-wrapper" ng-show="animationMove">
 
-			<div class="choices-view" ng-show="(view === 'words')">
-				<div ng-if="myForm.$submitted && myForm.$error && myForm.$pristine">
-					<p class="error">All fields are required</p>
-				</div>
+		<div class="choices-view" ng-show="(view === 'words')">
+			<div ng-if="myForm.$submitted && myForm.$error && myForm.$pristine">
+				<p class="error">All fields are required</p>
+			</div>
 
-				<div ng-if="myForm.$submitted && myForm.numberType.$error && myForm.$pristine">
-					<p class="error">Please enter a huge number for the story</p>
-				</div>
+			<div ng-if="myForm.$submitted && myForm.numberType.$error && myForm.$pristine">
+				<p class="error">Please enter a huge number for the story</p>
+			</div>
 
-				<div class="words-section">
+			<div class="words-section">
 
-					<form name="myForm" ng-submit="processForm()" novalidate>
-						<p>Provide the following words:</p>
-						<div>
-							<input type="text" ng-model="jobTitle" placeholder="Job title" required>
+				<form name="myForm" class="myForm" ng-submit="processForm()" novalidate>
+					<p>Provide the following words:</p>
+					<div>
+						<input type="text" ng-model="jobTitle" placeholder="Job title" required>
 
-							<input type="text" ng-model="femaleName" placeholder="Female name" required>
+						<input type="text" ng-model="femaleName" placeholder="Female name" required>
 
-							<input type="text" ng-model="celebrity" placeholder="Celebrity" required>
-						</div>
-						<div>
-							<input type="text" ng-model="uselessSkill" placeholder="Useless skill" required>
+						<input type="text" ng-model="celebrity" placeholder="Celebrity" required>
+					</div>
+					<div>
+						<input type="text" ng-model="uselessSkill" placeholder="Useless skill" required>
 
-							<input type="text" ng-model="tediousTask" placeholder="Tedious task" required>
+						<input type="text" ng-model="tediousTask" placeholder="Tedious task" required>
 
-							<input type="text" ng-model="dirtyTask" placeholder="Dirty task" required>
-						</div>
-						<div>
-							<input type="text" ng-model="adjective" placeholder="Adjective" required>
+						<input type="text" ng-model="dirtyTask" placeholder="Dirty task" required>
+					</div>
+					<div>
+						<input type="text" ng-model="adjective" placeholder="Adjective" required>
 
-							<input type="text" ng-model="obnxCelebrity" placeholder="Obnoxious celebrity" required>
-							<input type="number" name="numberType" ng-model="hugeNumber" placeholder="Huge number" required>
-						</div>
-						<div class="submit-area">
-							<input type="submit" id="submit" value="Generate My Mad Lib"/>
-						</div>
+						<input type="text" ng-model="obnxCelebrity" placeholder="Obnoxious celebrity" required>
+						<input type="number" name="numberType" ng-model="hugeNumber" placeholder="Huge number" required>
+					</div>
+					<div class="submit-area">
+						<input type="submit" id="submit" value="Generate My Mad Lib"/>
+					</div>
 
-						
+					
 
-					</form>
-
-				</div>
+				</form>
 
 			</div>
 
-			<div class="story-view" ng-show="(view === 'story')">
+		</div>
 
-				<div class="story-section">
-					<p><span class="fill">{{femaleName}}</span> was a <span class="fill">{{jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span class="fill">{{tediousTask}}</span> and <span class="fill">{{dirtyTask}}</span>. So, <span class="fill">{{femaleName}}</span> met with her life mentor <span class="fill">{{celebrity}}</span> who told her to learn how to <span class="fill">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="fill">{{uselessSkill}}</span> so she studied programming instead.</p>
-			 
-					<p>What a great decision! With her new skills, <span class="fill">{{femaleName}}</span> built a(n) <span class="fill">{{adjective}}</span> robot named <span class="fill">{{obnxCelebrity}}</span> that not only loved <span class="fill">{{dirtyTask}}</span> but did it <span class="fill">{{hugeNumber}}</span> faster.</p>
-				</div>
-				<div class="reset-area">
-					<input type="button" id="reset" ng-click="reset()" value="Start over"/>
-				</div>
+		<div class="story-view" ng-show="(view === 'story')">
 
+			<div class="story-section">
+				<p><span class="fill">{{femaleName}}</span> was a <span class="fill">{{jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span class="fill">{{tediousTask}}</span> and <span class="fill">{{dirtyTask}}</span>. So, <span class="fill">{{femaleName}}</span> met with her life mentor <span class="fill">{{celebrity}}</span> who told her to learn how to <span class="fill">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="fill">{{uselessSkill}}</span> so she studied programming instead.</p>
+		 
+				<p>What a great decision! With her new skills, <span class="fill">{{femaleName}}</span> built a(n) <span class="fill">{{adjective}}</span> robot named <span class="fill">{{obnxCelebrity}}</span> that not only loved <span class="fill">{{dirtyTask}}</span> but did it <span class="fill">{{hugeNumber}}</span> faster.</p>
+			</div>
+			<div class="reset-area">
+				<input type="button" id="reset" ng-click="reset()" value="Start over"/>
 			</div>
 		</div>
+
 	</div>
 	
 	

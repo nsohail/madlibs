@@ -2,8 +2,12 @@ body {
 	border: 2px solid;
 	margin: 10px 100px;
 	font-family: 'Cabin Sketch', cursive;
+	min-width: 1084px;
 }
 
+.myForm > p {
+	margin-bottom: 35px;
+}
 
 .top-section {
 	margin: auto;
@@ -67,14 +71,14 @@ input[type="text"],  input[type="number"]{
 	font-weight: bold;
 	padding: 8px;
 	text-align: center;
-	margin-right: 40px;
-  	margin-bottom: 28px;
+	margin-right: 112px;
+  	margin-bottom: 45px;
 
 
 }
 
 .story-section {
-	padding: 0 50px 100px;
+	padding-bottom: 100px;
 	margin: auto;
 	font-size: 18px;
 }
@@ -114,24 +118,48 @@ p.error {
 }
 .animation-wrapper {
   transition: all 1s ease-in-out;
-  width: 2000px;
+  width: 2172px;
+  overflow: overlay;
+}
+
+.animation-wrapper.ng-hide-remove {
+	margin-left: 0px; 
+}
+
+.animation-wrapper.ng-hide-remove-active {
+	margin-left: -1200px; 
 }
 
 .animation-wrapper.ng-hide-add {
-  margin-left: -1020px;
+	margin-left: -1200px; 
 }
-.animation-wrapper.ng-hide-remove {
-  margin-left: 0px;
+
+.animation-wrapper.ng-hide-add-active {
+	margin-left: 0px; 
 }
-.animation-wrapper.ng-hide-remove.ng-hide-remove-active {
-  margin-left: 0px;
+
+
+
+.animation-wrapper-reverse.ng-hide-remove {
+	margin-left: 0px; 
 }
-.animation-wrapper.ng-hide-add.ng-hide-add-active {
-  margin-left: -1020px;
+
+.animation-wrapper-reverse.ng-hide-remove-active {
+	margin-left: -1200px; 
 }
+
+.animation-wrapper-reverse.ng-hide-add {
+	margin-left: -1200px; 
+}
+
+.animation-wrapper-reverse.ng-hide-add-active {
+	margin-left: 0px; 
+}
+
 
 
 .choices-view, .story-view {
 	float: left;
-	width: 1000px;
+	width: 970px;
+	padding: 0 58px;
 }
